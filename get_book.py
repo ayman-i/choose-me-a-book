@@ -1,6 +1,6 @@
 import sqlite3
 from random import choice as choose_random
-import time
+from time import sleep as sleep
 from db_tools import get_books, delete_book
 
 books_left = get_books()
@@ -12,12 +12,13 @@ try:
     book_chosen_f = book_chosen_f.replace(",", "").replace("'", "").replace("(", "").replace(")", "")
 except:
     print("You have read all of the books!")
+    sleep(5)
     exit()
 
 # Display to user and remove from database.
 print("Your chosen book is...")
-time.sleep(2)
+sleep(2)
 print("{}".format(book_chosen_f))
 delete_book(book_chosen)
 
-time.sleep(10)
+sleep(10)

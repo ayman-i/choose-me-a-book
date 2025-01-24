@@ -18,7 +18,7 @@ def connect_to_db():
 def add_to_db(books):
     c, conn = connect_to_db()
     for book in books:
-        c.execute("INSERT INTO Book VALUES(?)", (item,))
+        c.execute("INSERT INTO Book VALUES(?)", (book,))
     conn.commit()
 
 # Get all books from db.

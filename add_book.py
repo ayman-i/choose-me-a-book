@@ -1,5 +1,5 @@
 from time import sleep as sleep
-from initialise_db import sleep_with_message
+from db_tools import add_to_db
 
 # Ask the user to enter their book titles, add to database.
 def add_books():
@@ -19,6 +19,8 @@ def add_books():
     add_to_db(books_list)
 
 if __name__ == "__main__":
+    from initialise_db import sleep_with_message
     add_books()
     sleep_with_message("Books added.")
+    sleep(3)
 
