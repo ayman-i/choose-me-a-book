@@ -1,7 +1,7 @@
-import sqlite3
-from random import choice as choose_random
-from time import sleep as sleep
 from db_tools import get_books, delete_book
+from random import choice as choose_random
+import sqlite3
+from time import sleep as sleep
 
 books_left = get_books()
 

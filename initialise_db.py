@@ -1,13 +1,8 @@
-import openpyxl
-import sqlite3 as sql
-from time import sleep
-from db_tools import start_db, add_to_db
 from add_book import add_books
-
-# Sleep before sending message.
-def sleep_with_message(msg):
-    sleep(1)
-    print(msg)
+from db_tools import start_db, add_to_db
+import openpyxl
+from other_tools import sleep_with_message
+from time import sleep as sleep
 
 # Ask the user for their seeding method of choice, verify input.
 def ask_seed_method():
