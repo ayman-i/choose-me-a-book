@@ -37,7 +37,7 @@ def import_from_excel():
     # Gather the book titles from excel.
     books_list = []
     data_r = data.active
-    for row in range(1, data_r.max_row):
+    for row in range(0, data_r.max_row):
         for col in data_r.iter_cols(1, data_r.max_column):
             books_list.append(col[row].value)
 
